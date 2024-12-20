@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -77,7 +78,7 @@ fun TopBar() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = "ismailcanvarli",
+            text = stringResource(R.string.profile_name),
             color = Color.Black,
             fontSize = 20.sp,
             modifier = Modifier.weight(1f)
@@ -85,14 +86,14 @@ fun TopBar() {
         IconButton(onClick = { /* Share profile action */ }) {
             Icon(
                 painter = painterResource(id = R.drawable.ic_add),
-                contentDescription = "Share",
+                contentDescription = stringResource(R.string.share_button),
                 tint = Color.Black
             )
         }
         IconButton(onClick = { /* Options action */ }) {
             Icon(
                 painter = painterResource(id = R.drawable.ic_menu),
-                contentDescription = "Menu",
+                contentDescription = stringResource(R.string.menu_button),
                 tint = Color.Black
             )
         }
@@ -114,7 +115,7 @@ fun ProfileSection() {
         ) {
             Image(
                 painter = painterResource(id = R.drawable.profile_picture),
-                contentDescription = "Profile Picture",
+                contentDescription = stringResource(R.string.profile_picture),
                 modifier = Modifier
                     .size(80.dp)
                     .background(Color.Gray, shape = CircleShape),
@@ -124,27 +125,21 @@ fun ProfileSection() {
             Row(
                 horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.fillMaxWidth()
             ) {
-                ProfileStat(label = "53", description = "Posts")
-                ProfileStat(label = "105", description = "Followers")
-                ProfileStat(label = "147", description = "Following")
+                ProfileStat(label = "53", description = stringResource(R.string.posts))
+                ProfileStat(label = "105", description = stringResource(R.string.followers))
+                ProfileStat(label = "147", description = stringResource(R.string.following))
             }
         }
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "İsmail Can Varlı",
+            text = stringResource(R.string.profile_name_detail),
             color = Color.Black,
             fontSize = 16.sp,
             textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
-            text = "Marmara Üniversitesi",
-            color = Color.Black,
-            fontSize = 14.sp,
-            textAlign = TextAlign.Center
-        )
-        Text(
-            text = "Bilgisayar Mühendisliği",
+            text = stringResource(R.string.profile_section),
             color = Color.Black,
             fontSize = 14.sp,
             textAlign = TextAlign.Center
@@ -198,14 +193,14 @@ fun ActionButtons() {
             colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
             modifier = Modifier.width(150.dp)
         ) {
-            Text(text = "Edit Profile", color = Color.Black)
+            Text(text = stringResource(R.string.edit_profile), color = Color.Black)
         }
         Button(
             onClick = { /* Share profile action */ },
             colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
             modifier = Modifier.width(150.dp)
         ) {
-            Text(text = "Share Profile", color = Color.Black)
+            Text(text = stringResource(R.string.share_profile), color = Color.Black)
         }
         IconButton(onClick = { /* Add friend action */ }) {
             Icon(
@@ -240,9 +235,9 @@ fun TabSection() {
             .padding(horizontal = 40.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        TabItem(iconResId = R.drawable.ic_grid, contentDescription = "Photos")
-        TabItem(iconResId = R.drawable.ic_reels, contentDescription = "Reels")
-        TabItem(iconResId = R.drawable.ic_tagged, contentDescription = "Tagged")
+        TabItem(iconResId = R.drawable.ic_grid, contentDescription = stringResource(R.string.photos))
+        TabItem(iconResId = R.drawable.ic_reels, contentDescription = stringResource(R.string.reels))
+        TabItem(iconResId = R.drawable.ic_tagged, contentDescription = stringResource(R.string.tagged))
     }
 }
 

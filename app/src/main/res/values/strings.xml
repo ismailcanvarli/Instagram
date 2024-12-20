@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Instagram</string>
+    <string name="profile_name">ismailcanvarli</string>
+    <string name="share_button">Share</string>
+    <string name="menu_button">Menu</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="profile_name_detail">İsmail Can Varlı</string>
+    <string name="profile_section">Marmara Üniversitesi - Bilgisayar Mühendisliği</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="share_profile">Share Profile</string>
+    <string name="photos">Photos</string>
+    <string name="reels">Reels</string>
+    <string name="tagged">Tagged</string>
 </resources>
