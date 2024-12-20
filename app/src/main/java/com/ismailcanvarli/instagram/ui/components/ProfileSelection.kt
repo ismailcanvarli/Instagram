@@ -18,10 +18,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -45,6 +47,7 @@ fun ProfileSection() {
                 contentDescription = stringResource(R.string.profile_picture),
                 modifier = Modifier
                     .size(80.dp)
+                    .clip(CircleShape) // Ensures the image is displayed in a circular shape
                     .background(Color.Gray, shape = CircleShape),
                 contentScale = ContentScale.Crop
             )
@@ -62,7 +65,8 @@ fun ProfileSection() {
             text = stringResource(R.string.profile_name_detail),
             color = Color.Black,
             fontSize = 16.sp,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
