@@ -23,7 +23,7 @@ fun ProfileStat(label: String, description: String) {
             text = label, color = Color.Black, fontSize = 18.sp, textAlign = TextAlign.Center
         )
         Text(
-            text = description, color = Color.Gray, fontSize = 14.sp, textAlign = TextAlign.Center
+            text = description, color = Color.Black, fontSize = 14.sp, textAlign = TextAlign.Center
         )
     }
 }

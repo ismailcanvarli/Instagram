@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ismailcanvarli.instagram.R
@@ -30,6 +31,7 @@ fun TopBar() {
             text = stringResource(R.string.profile_name),
             color = Color.Black,
             fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
             modifier = Modifier.weight(1f)
         )
         IconButton(onClick = { /* Share profile action */ }) {
