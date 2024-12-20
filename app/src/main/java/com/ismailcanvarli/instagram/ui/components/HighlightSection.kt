@@ -2,10 +2,10 @@
 
 package com.ismailcanvarli.instagram.ui.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -19,10 +19,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ismailcanvarli.instagram.R
 
 @Composable
 fun HighlightsSection() {
@@ -33,22 +37,26 @@ fun HighlightsSection() {
             .horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(20.dp)
     ) {
-        HighlightItem("2024")
-        HighlightItem("Fitness & Sport")
-        HighlightItem("Board Game")
-        HighlightItem("2023")
-        HighlightItem("2022") // Yeni yıl eklendi
-        HighlightItem("2021") // Yeni yıl eklendi
+        HighlightItem("2024", R.drawable.highlight_2024)
+        HighlightItem("Fitness & Sport", R.drawable.highlight_fitness)
+        HighlightItem("Board Game", R.drawable.highlight_board_game)
+        HighlightItem("2023", R.drawable.highlight_2023)
+        HighlightItem("2022", R.drawable.highlight_2022) // Yeni yıl eklendi
+        HighlightItem("2021", R.drawable.highlight_2021) // Yeni yıl eklendi
     }
 }
 
 @Composable
-fun HighlightItem(text: String) {
+fun HighlightItem(text: String, imageRes: Int) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(
+        Image(
+            painter = painterResource(id = imageRes),
+            contentDescription = null,
             modifier = Modifier
                 .size(75.dp)
-                .background(Color.Gray, shape = CircleShape)
+                .clip(CircleShape) // Ensures the image is displayed in a circular shape
+                .background(Color.Gray, shape = CircleShape),
+            contentScale = ContentScale.Crop
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
