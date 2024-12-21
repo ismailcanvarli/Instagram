@@ -40,7 +40,7 @@ fun InstagramProfileScreen() {
             HighlightsSection()
             Spacer(modifier = Modifier.height(16.dp))
             TabSection()
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(4.dp))
             PostsGrid()
         }
     }

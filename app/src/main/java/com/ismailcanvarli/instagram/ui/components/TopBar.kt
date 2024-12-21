@@ -5,6 +5,7 @@ package com.ismailcanvarli.instagram.ui.components
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -24,7 +25,7 @@ fun TopBar() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
@@ -38,14 +39,16 @@ fun TopBar() {
             Icon(
                 painter = painterResource(id = R.drawable.ic_add),
                 contentDescription = stringResource(R.string.share_button),
-                tint = Color.Black
+                tint = Color.Black,
+                modifier = Modifier.size(32.dp)
             )
         }
         IconButton(onClick = { /* Options action */ }) {
             Icon(
                 painter = painterResource(id = R.drawable.ic_menu),
                 contentDescription = stringResource(R.string.menu_button),
-                tint = Color.Black
+                tint = Color.Black,
+                modifier = Modifier.size(32.dp)
             )
         }
     }
