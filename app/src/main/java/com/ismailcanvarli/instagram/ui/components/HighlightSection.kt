@@ -53,7 +53,7 @@ fun HighlightItem(text: String, imageRes: Int) {
             painter = painterResource(id = imageRes),
             contentDescription = null,
             modifier = Modifier
-                .size(75.dp)
+                .size(70.dp)
                 .clip(CircleShape) // Ensures the image is displayed in a circular shape
                 .background(Color.Gray, shape = CircleShape),
             contentScale = ContentScale.Crop
