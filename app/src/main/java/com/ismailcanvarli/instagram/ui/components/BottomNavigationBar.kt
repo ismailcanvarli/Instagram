@@ -27,12 +27,12 @@ import com.ismailcanvarli.instagram.R
 @Composable
 fun BottomNavigationBar() {
     Surface(
-        color = Color.White, modifier = Modifier.fillMaxWidth()
+        color = Color.White, modifier = Modifier.fillMaxWidth().padding(bottom = 4.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(48.dp)
+                .height(56.dp)
                 .padding(horizontal = 16.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
